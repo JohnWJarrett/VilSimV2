@@ -1,0 +1,15 @@
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\CharGen.exe.config
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\CharGen.exe
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\CharGen.pdb
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\CharGen.xml
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.vbprojAssemblyReference.cache
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.Form1.resources
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.Resources.resources
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.vbproj.GenerateResource.cache
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.vbproj.CoreCompileInputs.cache
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.exe
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.xml
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.pdb
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\LiteDB.dll
+C:\Users\Kitten\source\repos\CharGen\bin\Debug\LiteDB.xml
+C:\Users\Kitten\source\repos\CharGen\obj\Debug\CharGen.vbproj.CopyComplete

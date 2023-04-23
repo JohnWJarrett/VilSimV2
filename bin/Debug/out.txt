@@ -1,0 +1,14 @@
+Statistics for 5000 Runs
+
+Married: 4251 (85.02%) for (S > 3.06)
+Unfaith: 504 (10.08%) for (S < 2.68)
+
+AvgL10%: 1.87168
+LowestS: -1.3
+Lo10th%: 2.68
+MedianS: 4.52
+Average: 4.492536
+Std Dev: 1.42230021047036
+Up10th%: 6.3
+HigestS: 9
+AvgU10%: 6.87532000000002

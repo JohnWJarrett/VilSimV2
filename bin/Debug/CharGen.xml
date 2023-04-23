@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CharGen
+</name>
+</assembly>
+<members>
+<member name="T:CharGen.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:CharGen.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:CharGen.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:CharGen.My.Resources.Resources.females">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="P:CharGen.My.Resources.Resources.last">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="P:CharGen.My.Resources.Resources.males">
+<summary>
+  Looks up a localized string similar to .
+</summary>
+</member>
+<member name="M:CharGen.analysis.AnalyzeScores(System.Double[])">
+ <summary>
+ Analyzes an array of scores and returns Summary, Total Average, Median, Lowest Value, Highest Value, Lower 10% Average, Upper 10% Average, Standard Deviation, Lower 10th Percentile, Upper 10th Percentile, Married Count, Unfaithful Count, Married Percent of total, unfaithful Percent of total.
+ </summary>
+ <param name="scores">An array of scores to analyze.</param>
+ <returns></returns>
+</member>
+</members>
+</doc>
