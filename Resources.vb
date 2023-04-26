@@ -37,6 +37,8 @@
 
     Private ReadOnly _resources As Integer()
 
+    Private ReadOnly _AvailableLandTypes As List(Of Integer)
+
     Public Sub New()
         ReDim _resources([Enum].GetValues(GetType(ResType)).Length - 1)
     End Sub
@@ -50,17 +52,35 @@
         End Set
     End Property
 
-    Public Function CheckRequirements(List As List(Of String)) As Boolean
-        Dim Result As Boolean = True
-
+    Public Function CheckRequirements(List As List(Of String)) As (Result As Boolean, Message As String)
+        Dim MyResult As Boolean = True
+        Dim Mes As String = Nothing
         For Each rr As String In List
-            If Not Resources(rr.Split("=")(0)) >= rr.Split("=")(1) Then
-                Result = False
+            If Resources(rr.Split("=")(0)) < rr.Split("=")(1) Then
+                Dim keyValue() As String = rr.Split("=")
+                Dim key As String = keyValue(0)
+                Dim requiredValue As Integer = Integer.Parse(keyValue(1))
+                Mes = $"Resource: {key}, Required: {requiredValue}, Available: {Resources(key)}"
+                MyResult = False
                 Exit For
             End If
         Next
 
-        Return Result
+        Return (MyResult, Mes)
+    End Function
+
+    Public Function GetAvailableLandTypes() As List(Of Integer)
+        For i = 22 To 30
+            If _resources(i) > 0 Then
+                _AvailableLandTypes.Add(i)
+            End If
+        Next
+
+        Return _AvailableLandTypes
+    End Function
+
+    Public Function CheckLandType(ReqString As Integer) As Boolean
+        Return _AvailableLandTypes.Contains(ReqString)
     End Function
 
 End Class

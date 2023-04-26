@@ -37,6 +37,32 @@
     ' =======================================================================================================================================================
 
     Public Const StartingBaseHealth As Double = 100
+    Public Const HealthyLifeDrain As Double = 1.1
+
+    ' =======================================================================================================================================================
+
+    ' The minimum age that villagers will start dating
+    Public Const MinAgeForRelation As Integer = 13
+
+    ' The range give or take from the villagers age that their potential partner can be, as long as they are over the age of [MinAgeForRelations]
+    Public Const RangeForRelations As Integer = 3
+
+    ' The age you have to be to get married
+    Public Const MinMarriageAge As Integer = 18
+
+    ' The minimum age for childbirth in females
+    Public Const MinChildbirthAge As Integer = 16
+
+    ' The socially acceptable age for childbirth in females
+    Public Const MinSACBAge As Integer = 18
+
+    ' The maximum age for childbirth in females
+    Public Const MaxChildbirthAge As Integer = 55
+
+    ' The age you have to be to get an occupation
+    Public Const MinAgeForJob As Integer = 16
+
+    Public Const MaxAgeToLeaveVillage As Integer = 60
 
     ' =======================================================================================================================================================
 

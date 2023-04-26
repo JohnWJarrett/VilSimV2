@@ -5,6 +5,8 @@
     Public ReadOnly Property Name_F As String
     Public ReadOnly Property Name_L As String
     Public ReadOnly Property Age As Integer
+    Public Property DOD As Integer
+    Public Property MOY As Integer
 
     ' Occupation
     Public Property Occupation As String
@@ -15,6 +17,8 @@
     Public ReadOnly Property MotherUID As String
 
     Public ReadOnly Property RelationshipList As List(Of String)
+
+    Public Property InRelationship As Boolean
 
     ' Pysical Description - Public
     Public ReadOnly Property EyeColour As String
@@ -41,8 +45,11 @@
     ' Health
     Public Property Health As Double ' Between 0 and 100
     Public Property IsSickOrInjured As Boolean
+    Public Property YearsInjured As Integer
     Public Property HasChronicIllness As Boolean
     Public Property IsHungry As Boolean
+    Public Property YearsHungry As Integer
+    Public Property YearsHomeless As Integer
 
     ' Properties with proc
     Public Property GenderChar As Char
@@ -244,4 +251,55 @@
 
         Return Result
     End Function
+
+    Public Function AgeUp() As Boolean
+        Dim Result As Boolean = False
+        Dim LD As Double = HealthyLifeDrain
+
+        _Age += 1
+
+        If IsSickOrInjured Then
+            YearsInjured -= 1
+            If Not YearsInjured > 0 Then
+                IsSickOrInjured = False
+            Else
+                LD += (LD * 0.2)
+            End If
+        End If
+
+        If IsHungry Then
+            LD += (LD * 0.25)
+            YearsHungry += 1
+        Else
+            YearsHungry = 0
+        End If
+
+        If HasChronicIllness Then
+            LD += (LD * 0.3)
+        End If
+
+        If SClass = 0 Then
+            YearsHomeless += 1
+        Else
+            YearsHomeless = 0
+        End If
+
+        Health -= LD
+
+        If Health > 0 Then
+            Result = True
+        End If
+
+        Return Result
+    End Function
+
+    Public Sub AddRelationship(RelationshipUID As String)
+        InRelationship = True
+        RelationshipList.Add(RelationshipUID)
+    End Sub
+
+    Public Sub RemoveRelationship()
+        InRelationship = False
+    End Sub
+
 End Class

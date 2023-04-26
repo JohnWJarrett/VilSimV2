@@ -1,6 +1,7 @@
 ﻿Public Class Traits
 
     Public Property TraitsList As List(Of Trilean)
+    Public Property TraitsSpread As Integer
 
     Public Sub New()
         Dim nTrait As Trilean
@@ -9,6 +10,7 @@
             nTrait = New Trilean(l.Split(".")(0), l.Split(".")(1))
             TraitsList.Add(nTrait)
         Next
+        TraitsSpread = TraitsList.Count
     End Sub
 
     Public Function CalculateScore(Vil2 As Villager) As Double
@@ -26,5 +28,7 @@
             t.Scale = RNGenD()
         Next
     End Sub
+
+
 
 End Class

@@ -79,6 +79,7 @@
     <Compile Include="AgeGroupManager.vb" />
     <Compile Include="analysis.vb" />
     <Compile Include="Building.vb" />
+    <Compile Include="BuildingTemplate.vb" />
     <Compile Include="DB.vb" />
     <Compile Include="Enums.vb" />
     <Compile Include="Form1.vb">
@@ -112,6 +113,7 @@
     <Compile Include="trilean.vb" />
     <Compile Include="Village.vb" />
     <Compile Include="Villager.vb" />
+    <Compile Include="VillagerActions.vb" />
     <Compile Include="VillageVariables.vb" />
   </ItemGroup>
   <ItemGroup>

@@ -232,8 +232,16 @@ Public Module tools
         Dim MScore As Double = GetMatch(VilA, VilB) ' Personality (Traits) score between -x and x where x is the amount of traits that exist
         Dim SScore As Integer = GetSClassMatchScore(VilA, VilB) ' Social class score between 0 and 10
         Dim BScore As Integer = GetAttractionScore(VilA, VilB) ' Attractivness score between 0 and 10
+        Dim x As Integer = VilA.Traits.TraitsSpread
 
-        Dim WeightedMScore As Double = MScore * 0.2
+        ' Normalize MScore to a range between 0 and 1
+        Dim NormalizedMScore As Double = (MScore + x) / (2 * x)
+
+        ' Set a fixed value for the maximum score
+        Dim MaxScore As Double = 10.0
+
+        ' Scale the normalized MScore to the maximum score
+        Dim WeightedMScore As Double = NormalizedMScore * MaxScore * 0.2
         Dim WeightedSScore As Double = SScore * 0.5
         Dim WeightedBScore As Double = BScore * 0.3
 

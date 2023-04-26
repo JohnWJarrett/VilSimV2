@@ -211,7 +211,7 @@ Public Class Building
 
     ' Make Resources
     Public Sub MakeResource()
-        Dim ResInP As Integer  ' The resource consumed
+        Dim ResInP As Integer ' The resource consumed
         Dim ramntI As Integer ' Required Amount In
         Dim ResOut As Integer ' The resource produced
         Dim ramntO As Integer ' Required Amount Out
@@ -266,6 +266,6 @@ Public Class Building
 
     ' Checks to see if a building can be built
     Public Function CheckBuildRequirements() As Boolean
-        Return VilResources.CheckRequirements(RequiredResources)
+        Return VilResources.CheckRequirements(BuildingRequirements).Result
     End Function
 End Class
